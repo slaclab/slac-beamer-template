@@ -1,0 +1,88 @@
+% Author: Stephan Kuschel
+% kuschel@slac.stanford.edu
+% first version: Dez 2018 by Kuschel
+% https://github.com/skuschel/SLACbeamertheme
+
+\ProvidesPackage{beamerthemeSLAC}[2018/12/20]
+
+\mode<presentation>
+
+%\useinnertheme[shadow=false]{rounded}
+
+%*****colors*****
+
+% https://www6.slac.stanford.edu/about/logo-resources
+
+\definecolor{pantone}{RGB}{164, 0, 29}
+\definecolor{blue}{RGB}{0, 45, 60}
+
+
+%*****Outer-Theme****
+
+\setbeamercolor*{author in head/foot}{parent=palette tertiary}
+\setbeamercolor*{title in head/foot}{parent=palette secondary}
+\setbeamercolor*{date in head/foot}{parent=palette primary}
+\setbeamercolor*{section in head/foot}{parent=palette tertiary}
+\setbeamercolor*{subsection in head/foot}{parent=palette primary}
+
+\setbeamercolor{item}{fg=pantone}
+\setbeamertemplate{itemize items}{\textbullet}
+\setbeamertemplate{itemize subitem}{{\bfseries --}}
+
+\setbeamercolor{titlelike}{fg=black, bg=white}
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{subtitle}{series=\normalfont}
+
+\setbeamercolor{frametitle}{fg=pantone}
+\setbeamerfont{frametitle}{series=\bfseries}
+
+
+%******Beamer Templates*****
+
+\defbeamertemplate*{footline}{slac}
+{
+\hfill \insertframenumber{} / \inserttotalframenumber{} \hspace*{1ex}
+}
+
+
+\defbeamertemplate*{title page}{slac}
+{
+\setlength{\unitlength}{\paperwidth}%
+\hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}% calculation of left margin width
+\begin{picture}(1,0.75)%
+\put(0,0){\includegraphics[width=\paperwidth]{slac-lines-pantone.png}}
+\put(0.73,0.04){\includegraphics[width=3cm]{slac-logo-primary-2.png}}
+\put(0.06, 0.04){\includegraphics[width=3.5cm]{doe-su-logo.png}}
+\put(0.06, 0.5){\begin{minipage}[t]{\textwidth}
+  \usebeamerfont{title}\inserttitle\par
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \bigskip
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{institute}\insertinstitute\par
+  \usebeamerfont{date}\insertdate
+  \end{minipage}}
+\end{picture}
+}
+
+
+\defbeamertemplate*{frametitle}{slac}
+{
+\setlength{\unitlength}{\paperwidth}%
+\hspace*{-\dimexpr0.5\paperwidth-0.5\textwidth}% calculation of left margin width
+\begin{picture}(1,0.13)
+  \put(0,0){\includegraphics[width=\paperwidth]{slac-frametitle-bg.png}}
+  \put(0,0.01){\includegraphics[width=\paperwidth-0.75cm]{slac-frametitle-bg-logo.png}}
+\end{picture}%
+\vspace*{-2em}
+{\insertframetitle}
+}
+
+
+%******weiteres
+
+%\setbeamerfont{block title}{size={}}
+
+\setbeamertemplate{navigation symbols}{}
+%\setbeamersize{text margin left=1em,text margin right=1em}
+
+\mode<all>
