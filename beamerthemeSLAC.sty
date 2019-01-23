@@ -5,19 +5,22 @@
 % git sha: $Format:%H$
 % https://github.com/skuschel/slac-beamer-template
 
-\ProvidesPackage{beamerthemeSLAC}[2018/12/20]
+\ProvidesPackage{beamerthemeSLAC}[2019/01/22]
 
 \mode<presentation>
 
-%\useinnertheme[shadow=false]{rounded}
+\useinnertheme[shadow=false]{rounded}
 
 %*****colors*****
 
 % https://www6.slac.stanford.edu/about/logo-resources
 
 \definecolor{pantone}{RGB}{164, 0, 29}
-\definecolor{blue}{RGB}{0, 45, 60}
+\definecolor{blue}{RGB}{0, 115, 153}
+\definecolor{skin}{RGB}{219, 199, 157}
 
+
+%\setbeamertemplate{blocks}[rounded][shadow=false]
 
 %*****Outer-Theme****
 
@@ -82,7 +85,17 @@
 
 %******weiteres
 
-%\setbeamerfont{block title}{size={}}
+\setbeamercolor{block title}{bg=pantone,fg=white}
+\setbeamercolor{block body}{bg=skin!40,fg=black}
+
+\setbeamercolor{block title alerted}{bg=pantone!70!black,fg=white}
+\setbeamercolor{block body alerted}{bg=pantone,fg=white}
+
+\setbeamercolor{block title example}{bg=blue!70!black,fg=white}
+\setbeamercolor{block body example}{bg=blue,fg=white}
+%\setbeamerfont{block title}{series=\bfseries}
+
+
 
 \setbeamertemplate{navigation symbols}{}
 %\setbeamersize{text margin left=1em,text margin right=1em}
