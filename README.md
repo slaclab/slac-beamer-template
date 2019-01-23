@@ -10,4 +10,4 @@ pdflatex exampleSLAC.tex
 
 ## Questions?
 
-Please use the [github issue tracker](https://github.com/skuschel/slac-beamer-template/issues).
+Please use the [github issue tracker](https://github.com/slaclab/slac-beamer-template/issues).
