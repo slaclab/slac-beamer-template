@@ -59,8 +59,14 @@
 \put(0.73,0.04){\includegraphics[width=3cm]{slac-logo-primary-2.png}}
 \put(0.06, 0.04){\includegraphics[width=3.5cm]{doe-su-logo.png}}
 \put(0.06, 0.5){\begin{minipage}[t]{\textwidth}
-  \usebeamerfont{title}\inserttitle\par
-  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par
+  \begin{minipage}{0.7\textwidth}
+  \flushleft
+  \usebeamerfont{title}\inserttitle
+  \end{minipage} \par\medskip
+  \begin{minipage}{0.7\textwidth}
+  \flushleft
+  \usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle
+  \end{minipage} \par
   \bigskip
   \usebeamerfont{author}\insertauthor\par
   \usebeamerfont{institute}\insertinstitute\par
